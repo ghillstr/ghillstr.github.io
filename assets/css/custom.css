@@ -1,0 +1,51 @@
+/*
+	Site-specific overrides.
+	Kept separate from main.css, which is generated from assets/sass.
+*/
+
+/* Project cards: keep thumbnails a consistent shape so the grid stays even
+   regardless of the aspect ratio of each screenshot. */
+
+	.features article .image {
+		display: block;
+	}
+
+		.features article .image img {
+			aspect-ratio: 16 / 10;
+			object-fit: cover;
+			width: 100%;
+		}
+
+/* Certifications table: let the credential name take the room it needs and
+   keep the date column from wrapping. */
+
+	#certifications table td:first-child {
+		width: 45%;
+	}
+
+	#certifications table td:last-child {
+		white-space: nowrap;
+	}
+
+/* Banner resume buttons: stack instead of squeezing on narrow screens. */
+
+	@media screen and (max-width: 480px) {
+
+		#banner ul.actions.special {
+			display: block;
+		}
+
+			#banner ul.actions.special li {
+				display: block;
+				padding: 0.75em 0 0 0;
+			}
+
+				#banner ul.actions.special li:first-child {
+					padding-top: 0;
+				}
+
+				#banner ul.actions.special li .button {
+					width: 100%;
+				}
+
+	}
