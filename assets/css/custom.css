@@ -27,6 +27,14 @@
 		white-space: nowrap;
 	}
 
+/* Banner resume buttons: the labels are long enough that two side by side
+   overflow a tablet viewport, so let them wrap onto a second row. */
+
+	#banner ul.actions.special {
+		flex-wrap: wrap;
+		row-gap: 0.75em;
+	}
+
 /* Banner resume buttons: stack instead of squeezing on narrow screens. */
 
 	@media screen and (max-width: 480px) {
