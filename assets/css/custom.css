@@ -95,3 +95,28 @@
 				}
 
 	}
+
+/* Footer QR: a visitor on a desktop can scan this to carry the site to their
+   phone. Sits on its own row because #footer .inner is a wrapping flex row
+   whose children default to full width. */
+
+	#footer .qr {
+		text-align: center;
+		margin-top: 2.5em;
+	}
+
+		#footer .qr img {
+			background: #ffffff;
+			border-radius: 4px;
+			display: inline-block;
+			padding: 0.5em;
+			width: 132px;
+		}
+
+		#footer .qr p {
+			color: rgba(255, 255, 255, 0.55);
+			font-size: 0.8em;
+			letter-spacing: 0.1em;
+			margin: 1em 0 0 0;
+			text-transform: uppercase;
+		}
