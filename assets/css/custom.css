@@ -47,6 +47,21 @@
 			padding: 0;
 		}
 
+/* Banner on phones: the template left-aligns the banner, which reads as
+   off-centre once the content stacks into a narrow column. Centre it. */
+
+	@media screen and (max-width: 736px) {
+
+		#banner .inner {
+			text-align: center;
+		}
+
+		#banner ul.actions.special {
+			justify-content: center;
+		}
+
+	}
+
 /* Banner resume buttons: stack instead of squeezing on narrow screens. */
 
 	@media screen and (max-width: 480px) {
@@ -64,8 +79,19 @@
 					padding-top: 0;
 				}
 
+				/* .button is white-space: nowrap with a fixed height and
+				   line-height, and the template strips its padding below
+				   480px. A label longer than the button then overflows its
+				   box and widens the whole page, which it does on a 360px
+				   or 320px phone. Let these labels wrap and the button grow
+				   to fit them. */
+
 				#banner ul.actions.special li .button {
 					width: 100%;
+					white-space: normal;
+					height: auto;
+					line-height: 1.5;
+					padding: 1em 1.25em;
 				}
 
 	}
