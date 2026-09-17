@@ -28,12 +28,24 @@
 	}
 
 /* Banner resume buttons: the labels are long enough that two side by side
-   overflow a tablet viewport, so let them wrap onto a second row. */
+   overflow a tablet viewport, so let them wrap onto a second row.
+
+   The template spaces ul.actions with a negative left margin plus a left
+   padding on every li, cancelling it on :first-child only. That balances a
+   single row, but once the list wraps, the second row's leading button keeps
+   its padding and the rows sit off-centre by one gutter. Use a real gap
+   instead so every row centres on its own. */
 
 	#banner ul.actions.special {
 		flex-wrap: wrap;
-		row-gap: 0.75em;
+		justify-content: center;
+		margin-left: 0;
+		gap: 0.75em 1em;
 	}
+
+		#banner ul.actions.special li {
+			padding: 0;
+		}
 
 /* Banner resume buttons: stack instead of squeezing on narrow screens. */
 
